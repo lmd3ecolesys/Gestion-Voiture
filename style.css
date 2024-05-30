@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+body{
+    background: url(bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+header{
+    width:100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px #000;
+    background: rgba(0,0,0,0.5);
+}
+#chk1{
+    display: none;
+     
+     
+}
+i{
+    color: #fff;
+    cursor: pointer;
+}
+header .logo{
+    flex: 1;
+    color:#fff;
+     
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+header .search-box{
+    flex: 1;
+    position: relative;
+}
+.search-box input{
+    width:100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background:#f2f2f2;
+    border-radius: 30px;
+    color:gray;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 40px;
+    text-align: center;
+     
+}
+ 
+.search-box button{
+    cursor: pointer;
+    width:40px;
+    height: 40px;
+    border-radius: 30px;
+    border:none;
+    position: absolute;
+    top:0;
+    right: 0;
+    transform: scale(0.9);
+    background: green;
+    color: #fff;
+}
+header ul {
+    flex:2;
+    display: flex;
+    justify-content: space-evenly;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+header ul li a:hover{
+    border-bottom: 2px solid cadetblue;
+}
+header .menu{
+    font-size: 2.5em;
+    display: none;
+}
+@media(max-width:1000px){
+    .search-box button{
+        position: absolute;
+    }
+    header ul{
+        position: fixed;
+        top:100px;
+        right: -100%;
+        background: rgba(0,0,0,0.5);
+        height: calc(100vh - 100px);
+        width:50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+     
+    header .menu{
+        display: block;
+        width:100px;
+        text-align: center;
+    }
+    #chk1:checked ~ ul{
+        right: 0;
+        
+    }
+  
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .content h2 {
+    margin: 0;
+    padding: 25px 0;
+    font-size: 22px;
+    border-bottom: 1px solid #ebebeb;
+    color: #666666;
+  }
+  .read .create-contact {
+    display: inline-block;
+    text-decoration: none;
+    background-color: green;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    margin: 15px 0;
+  }
+  .read .create-contact:hover {
+    background-color: #32a367;
+  }
+  .read .pagination {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .read .pagination a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #a5a7a9;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    margin: 15px 0 15px 5px;
+  }
+  .read .pagination a:hover {
+    background-color: #999b9d;
+  }
+  .read table {
+    width: 100%;
+    padding-top: 30px;
+    border-collapse: collapse;
+  }
+  .read table thead {
+    background-color: #ebeef1;
+    border-bottom: 1px solid #d3dae0;
+  }
+  .read table thead td {
+    padding: 10px;
+    font-weight: bold;
+    color: #767779;
+    font-size: 14px;
+  }
+  .read table tbody tr {
+    border-bottom: 1px solid #d3dae0;
+  }
+  .read table tbody tr:nth-child(even) {
+    background-color: #fbfcfc;
+  }
+  .read table tbody tr:hover {
+    background-color: #376ab7;
+  }
+  .read table tbody tr:hover td {
+    color: #FFFFFF;
+  }
+  .read table tbody tr:hover td:nth-child(1) {
+    color: #FFFFFF;
+  }
+  .read table tbody tr td {
+    padding: 10px;
+  }
+  .read table tbody tr td:nth-child(1) {
+    color: #a5a7a9;
+  }
+  .read table tbody tr td.actions {
+    padding: 8px;
+    text-align: right;
+  }
+  .read table tbody tr td.actions .edit, .read table tbody tr td.actions .trash {
+    display: inline-flex;
+    text-align: right;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 10px 12px;
+  }
+  .read table tbody tr td.actions .trash {
+    background-color: #b73737;
+  }
+  .read table tbody tr td.actions .trash:hover {
+    background-color: #a33131;
+  }
+  .read table tbody tr td.actions .edit {
+    background-color: #37afb7;
+  }
+  .read table tbody tr td.actions .edit:hover {
+    background-color: #319ca3;
+  }
+  .update form {
+    padding: 15px 0;
+    display: flex;
+    flex-flow: wrap;
+  }
+  .update form label {
+    display: inline-flex;
+    width: 400px;
+    padding: 10px 0;
+    margin-right: 25px;
+  }
+  .update form input {
+    padding: 10px;
+    width: 400px;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+  }
+  .update form input[type="submit"] {
+    display: block;
+    background-color: #38b673;
+    border: 0;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    cursor: pointer;
+    width: 200px;
+  margin-top: 15px;
+  }
+  .update form input[type="submit"]:hover {
+    background-color: #32a367;
+  }
+  .delete .yesno {
+    display: flex;
+  }
+  .delete .yesno a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #38b673;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    margin: 15px 10px 15px 0;
+  }
+  .delete .yesno a:hover {
+    background-color: #32a367;
+  }
